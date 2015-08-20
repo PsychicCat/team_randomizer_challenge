@@ -1,3 +1,6 @@
+$(document).ready(function(){
+var $form = $('#radio');
+var teams = [];
 var classArray = [
     "Allan",
     "Ben",
@@ -20,6 +23,28 @@ var classArray = [
     "Vas"
 ];
 
+var teamObject = {};
+
+
+$form.on('submit', function(e){
+  e.preventDefault();
+  var numOfTeams = $('input:radio:checked').val();
+  teamGenerator(numOfTeams);
+  teamObject = {
+  team1: teams[0],
+  team2: teams[1],
+  team3: teams[2],
+  team4: teams[3],
+  team5: teams[4],
+  team6: teams[5],
+  team7: teams[6],
+  team8: teams[7],
+  team9: teams[8],
+  team10: teams[9]
+}
+});
+
+
 
 //shuffle function!
 function shuffle(array) {
@@ -40,12 +65,13 @@ function shuffle(array) {
   return array;
 }
 
-var shuffledClass = shuffle(classArray);
-var teams = [];
+
+
 
 
 //team generating function 
 function teamGenerator(numOfTeams){
+  var shuffledClass = shuffle(classArray);
   var teamSize = Math.floor(shuffledClass.length/numOfTeams);
   if(numOfTeams == 10){teamSize = 2;}
   for(var i=0; i<numOfTeams; i++){
@@ -54,7 +80,11 @@ function teamGenerator(numOfTeams){
   if(shuffledClass.length !== 0){
     teams[numOfTeams-1].push(shuffledClass[0]);
   }
+
+
 }
 
 
 
+
+});
