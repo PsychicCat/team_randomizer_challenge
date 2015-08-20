@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description">
+  <title>Team Randomizer</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/handlebars-v3.0.3.js"></script>
+  <script type="text/javascript" src='js/scripts.js'></script>
+</head>
+<body>
+    <h1>Class Team Generator</h1>
+        <script id="entry-template" type="text/x-handlebars-template">
+         {{#each this}}
+             
+       
+        </script>
+        <form id="radio">
+            <label for="2">2</label><input type="radio" name="#ofTeams" id="2" value="2"/>
+            <label for="3">3</label><input type="radio" name="#ofTeams" id="3" value="3"/>
+            <label for="4">4</label><input type="radio" name="#ofTeams" id="4" value="4"/>
+            <label for="5">5</label><input type="radio" name="#ofTeams" id="5" value="5"/>
+            <label for="6">6</label><input type="radio" name="#ofTeams" id="6" value="6"/>
+            <label for="7">7</label><input type="radio" name="#ofTeams" id="7" value="7"/>
+            <label for="8">8</label><input type="radio" name="#ofTeams" id="8" value="8"/>
+            <label for="9">9</label><input type="radio" name="#ofTeams" id="9" value="9"/>
+            <label for="10">10</label><input type="radio" name="#ofTeams" id="10" value="10"/>
+            <input type="submit" value="Generate teams!"/>
+        </form>
+        
+        <div id="content"></div>
+</body>
+</html>
