@@ -27,11 +27,18 @@
   {{/each}}
   </div>
   </script>
-  <div class="container-fluid">
+  <div class="container">
     <h1 class="header-">Class Team Generator</h1>
+    <ul class="nav">
+      <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+      <li class="btn btn-block btn-info" id="group-selector">Generate By Number Of Teams</li>
+      <li class="btn btn-block btn-info" id="size-selector">Generate By Number Of Members</li>
+    </ul>
+  </div>
   </div>
   <div class="container">
-        <form id="radio">
+        <form id="radio1">
           <div class="form-group">
           <fieldset>
             <legend>Select Number of Groups:</legend>
@@ -45,6 +52,24 @@
             <input type="radio"  name="#ofTeams" value="9"/><label for="9"> 9</label>
             <input type="radio"  name="#ofTeams" value="10"/><label for="10"> 10</label>
           </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Generate teams!"/>
+          </fieldset>
+        </form>
+
+         <form id="radio2">
+          <div class="form-group">
+          <fieldset>
+            <legend>Select Team Size:</legend>
+            <input type="radio" name="#ofTeams" value="2"/><label for="2"> 2</label>
+            <input type="radio" name="#ofTeams" value="3"/><label for="3"> 3</label>
+            <input type="radio"  name="#ofTeams" value="4"/><label for="4"> 4</label>
+            <input type="radio"  name="#ofTeams" value="5"/><label for="5"> 5</label>
+            <input type="radio"  name="#ofTeams" value="6"/><label for="6"> 6</label>
+            <input type="radio"  name="#ofTeams" value="7"/><label for="7"> 7</label>
+            <input type="radio"  name="#ofTeams" value="8"/><label for="8"> 8</label>
+            <input type="radio"  name="#ofTeams" value="9"/><label for="9"> 9</label>
+            <input type="radio"  name="#ofTeams" value="10"/><label for="10"> 10</label>
+            </div>
             <input type="submit" class="btn btn-primary btn-block" value="Generate teams!"/>
           </fieldset>
         </form>
