@@ -1,10 +1,13 @@
 $(document).ready(function(){
 	$form = $('#radio');
 
+$form.slideDown('slow');
+
 var source   = $("#teams-template").html();
 var template = Handlebars.compile(source);
 
-	$form.on('submit', function(e){
+
+$form.on('submit', function(e){
 		e.preventDefault();
 		var numOfTeams = $('input:radio:checked').val();
 		if(numOfTeams == null) {
@@ -12,10 +15,12 @@ var template = Handlebars.compile(source);
 		}
 		var teams = teamGenerator(numOfTeams);
 
-		
-		$('#content').html(template(teams));
-	});
 
+		$('#content').html(template(teams));
+		$('#content').hide().delay(400).show('slide');
+
+
+});
 
 //shuffle function!
 function shuffle(array) {
