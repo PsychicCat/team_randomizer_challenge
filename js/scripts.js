@@ -171,7 +171,7 @@ function teamGenerator2(teamSize){
 		var shuffledClass = shuffle(classArray);
 	//determine size of teams
 	var teamSize = teamSize;
-		var numOfTeams = Math.round(classArray.length/teamSize);
+		var numOfTeams = Math.ceil(classArray.length/teamSize);
 	
 	//hard code team size to 2 if number of teams == 10
 	  // if(numOfTeams == 10){teamSize = 2;}
